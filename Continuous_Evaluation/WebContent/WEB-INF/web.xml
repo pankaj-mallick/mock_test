@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Continuous_Evaluation</display-name>
+
+    <context-param>
+	<param-name>CEADMIN_PATH</param-name>
+	<param-value>/src/adminServlet</param-value>
+    </context-param>
+    <context-param>
+	<param-name>CETEACHER_PATH</param-name>
+	<param-value>/src/teacherServlet</param-value>
+    </context-param>
+	<context-param>
+	<param-name>CEUNIV_PATH</param-name>
+	<param-value>/src/univServlet</param-value>
+    </context-param>
+	<context-param>
+	<param-name>CESTUDENT_PATH</param-name>
+	<param-value>/src/studentServlet</param-value>
+    </context-param>
+    <servlet>
+	<servlet-name>Servlet</servlet-name>
+	<servlet-class>CE.Servlet</servlet-class>
+    </servlet>
+    <servlet>
+	<servlet-name>adminServlet</servlet-name>
+	<servlet-class>CE.adminServlet</servlet-class>
+    </servlet>
+    <servlet>
+	<servlet-name>teacherServlet</servlet-name>
+	<servlet-class>CE.teacherServlet</servlet-class>
+    </servlet>
+    <servlet>
+	<servlet-name>univServlet</servlet-name>
+	<servlet-class>CE.univServlet</servlet-class>
+    </servlet>
+    <servlet>
+	<servlet-name>studentServlet</servlet-name>
+	<servlet-class>CE.studentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+	<servlet-name>adminServlet</servlet-name>
+	<url-pattern>/adminServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+	<servlet-name>teacherServlet</servlet-name>
+	<url-pattern>/teacherServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+	<servlet-name>univServlet</servlet-name>
+	<url-pattern>/univServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+	<servlet-name>studentServlet</servlet-name>
+	<url-pattern>/studentServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
